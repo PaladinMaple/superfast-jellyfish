@@ -13,12 +13,14 @@ const app = new Vue({
       { name: 'Juan', age: 12 },
       { name: 'Carlos', age: 9 },
       { name: 'Cesar', age: 4 }
-  ],
-  showDucksData: false
+    ],
+    showDucksData: false,
+    color: 'f4f4f4'
 },
 methods: {
   changeState(){
     this.showDucksData = !this.showDucksData;
+    this.color = this.color.split('').reverse().join('');
   }
 },
 })
