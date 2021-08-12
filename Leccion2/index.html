@@ -13,6 +13,18 @@
             <span v-if="duckAge >= 10">💀💀</span>
             <span v-else>🦆🦆</span>
         </h1>
+
+        <ul>
+            <li v-for="(duck, index) in ducksNames" v-bind:key>
+                {{ index }} - {{ duck }}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="(duck, index) in ducksDetail" v-bind:key>
+                {{ index }} - {{ duck.name }} - {{ duck.age }}
+            </li>
+        </ul>
     </div>
 </body>
 </html>
