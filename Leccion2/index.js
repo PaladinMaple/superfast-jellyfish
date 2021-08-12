@@ -1,16 +1,7 @@
-// let title = 'Hola!'
-
-// const h1 = document.getElementById('h1')
-// h1.innerText = title
-
-// title = 'Chau!'
-// h1.innerText = title
-
 const app = new Vue({
     el: '#app',    
-    data () {
-      return {
-        title: 'Hola Vue!'
-      }
+    data:{
+      img: 'https://pbs.twimg.com/profile_images/623323276522188801/D1ehYWlt.jpg',
+      name: 'Duck Test'
     }
 })

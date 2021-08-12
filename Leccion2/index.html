@@ -8,12 +8,8 @@
 </head>
 <body>
     <div id='app'>
-        <h1>{{ title }}</h1>
-        <p>{{ 1 + 1 + 1 }}</p>
-        <p>{{ true || false }}</p>
-        <p>{{ true ? true : false }}</p>
-        <p>{{ 'string'.toUpperCase() }}</p>
-        <p>{{ JSON.stringify({ name: 'Nacho' }) }}</p>
+        <img v-bind:src="img" v-bind:alt="name">
+        <h1>{{name}}</h1>
     </div>
 </body>
 </html>
