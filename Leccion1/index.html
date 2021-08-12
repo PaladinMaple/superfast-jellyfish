@@ -22,7 +22,11 @@
         </span>
 
         <ul v-show="showDucksData">
-            <li v-for="(duck, index) in ducksDetail" v-bind:key>
+            <li
+            class="test"
+            v-bind:class="{ yellow: duck.age === duckMiddleAge, green: duck.age < duckMiddleAge, red: duck.age > duckMiddleAge }"
+            v-for="(duck, index) in ducksDetail" 
+            v-bind:key>
                 {{ index }} - {{ duck.name }} - {{ duck.age }}
             </li>
         </ul>
@@ -31,3 +35,4 @@
 </html>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="index.js"></script>
+<link rel="stylesheet" href="styles.css"></link>
