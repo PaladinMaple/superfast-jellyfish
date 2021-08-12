@@ -9,7 +9,10 @@
 <body>
     <div id='app'>
         <img v-bind:src="img" v-bind:alt="name">
-        <h1>{{name}}</h1>
+        <h1>{{name}}
+            <span v-if="duckAge >= 10">💀💀</span>
+            <span v-else>🦆🦆</span>
+        </h1>
     </div>
 </body>
 </html>
