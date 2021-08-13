@@ -23,6 +23,9 @@
             {{showDucksData ? 'Ocultar información' : 'Ver información de los patos' }}
         </span>
 
+        <input type="text" v-model="nameToLook">
+        <span>{{match}}</span>
+
         <ul v-show="showDucksData">
             <li
             v-bind:class="{ yellow: duck.age === duckMiddleAge, green: duck.age < duckMiddleAge, red: duck.age > duckMiddleAge }"

@@ -16,7 +16,8 @@ const app = new Vue({
       { name: 'Cesar', age: 4 }
     ],
     showDucksData: false,
-    color: 'f4f4f4'
+    color: 'f4f4f4',
+    nameToLook: '',
   },
 
   methods: {
@@ -29,6 +30,10 @@ const app = new Vue({
   computed:{
     reversedName: function(){
       return this.name.split('').reverse().join('');
+    },
+
+    match: function(){
+      return this.ducksDetail.findIndex(i => i.name.toLowerCase() == this.nameToLook.toLowerCase()) !== -1 ? "Duck's name found " : "";
     }
   },
   
