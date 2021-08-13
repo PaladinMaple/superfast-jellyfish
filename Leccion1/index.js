@@ -1,5 +1,6 @@
 const app = new Vue({
-  el: '#app',    
+  el: '#app',
+
   data:{
     img: 'https://pbs.twimg.com/profile_images/623323276522188801/D1ehYWlt.jpg',
     name: 'Duck Test',
@@ -13,12 +14,27 @@ const app = new Vue({
       { name: 'Juan', age: 12 },
       { name: 'Carlos', age: 9 },
       { name: 'Cesar', age: 4 }
-  ],
-  showDucksData: false
-},
-methods: {
-  changeState(){
-    this.showDucksData = !this.showDucksData;
+    ],
+    showDucksData: false,
+    color: 'f4f4f4'
+  },
+
+  methods: {
+    changeState(){
+      this.showDucksData = !this.showDucksData;
+      this.color = this.color.split('').reverse().join('');
+    }
+  },
+
+  computed:{
+    reversedName: function(){
+      return this.name.split('').reverse().join('');
+    }
+  },
+  
+  watch:{
+    showDucksData (newValue, oldValue){
+      console.log(newValue, oldValue);
+    }
   }
-},
 })
